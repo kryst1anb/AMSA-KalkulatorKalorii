@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sex"
+        android:textAlignment="center" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/radio_man_bmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Man"
+            android:textAlignment="viewStart"
+            android:gravity="start" />
+
+        <RadioButton
+            android:id="@+id/radio_woman_bmi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Woman"
+            android:textAlignment="viewStart"
+            android:gravity="start" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/text_height_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/height_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Height"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/text_weight_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/weight_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="Weight"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/button_calc_bmi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate BMI" />
+</LinearLayout>
