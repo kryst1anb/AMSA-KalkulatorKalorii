@@ -21,70 +21,16 @@
         android:text="Name of product"
         android:textAlignment="center" />
 
-    <TextView
-        android:id="@+id/text_protein_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Protein"
-        android:textAlignment="center" />
-
-    <EditText
-        android:id="@+id/protein_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="Protein"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/text_carbs_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Carbohydrates"
-        android:textAlignment="center" />
-
-    <EditText
-        android:id="@+id/carbs_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="Carbs"
-        android:textAlignment="center" />
-
-    <TextView
-        android:id="@+id/text_fat_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Fat"
-        android:textAlignment="center" />
-
-    <EditText
-        android:id="@+id/fat_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:editable="false"
-        android:ems="10"
-        android:inputType="numberDecimal"
-        android:text="Fat"
-        android:textAlignment="center" />
-
     <Button
-        android:id="@+id/button_calc_kcal"
+        android:id="@+id/button_search_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculate KCAL" />
+        android:text="show Product" />
 
-    <Button
-        android:id="@+id/button_add_kcal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add to list" />
-
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_search_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
 </LinearLayout>

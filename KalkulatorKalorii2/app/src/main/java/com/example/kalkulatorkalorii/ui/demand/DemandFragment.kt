@@ -22,10 +22,10 @@ class DemandFragment : Fragment() {
         demandViewModel =
             ViewModelProviders.of(this).get(DemandViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_demand, container, false)
-        val textView: TextView = root.findViewById(R.id.text_demand)
+        /*val textView: TextView = root.findViewById(R.id.text_demand)
         demandViewModel.text.observe(this, Observer {
             textView.text = it
-        })
+        })*/
         return root
     }
 }

@@ -12,18 +12,18 @@ import com.example.kalkulatorkalorii.R
 
 class BmrFragment : Fragment() {
 
-    private lateinit var BmrViewModel: BmrViewModel
+    private lateinit var bmrViewModel: BmrViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        BmrViewModel =
+        bmrViewModel =
             ViewModelProviders.of(this).get(BmrViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_bmr, container, false)
-        val textView: TextView = root.findViewById(R.id.text_bmr)
-        BmrViewModel.text.observe(this, Observer {
+        val textView: TextView = root.findViewById(R.id.text_sex_bmr)
+        bmrViewModel.text.observe(this, Observer {
             textView.text = it
         })
         return root

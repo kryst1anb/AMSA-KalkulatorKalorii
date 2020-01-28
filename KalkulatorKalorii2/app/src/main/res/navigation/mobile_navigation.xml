@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_bmr">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_bmr"
         android:name="com.example.kalkulatorkalorii.ui.bmr.BmrFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_bmr" />
 
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_bmi"
         android:name="com.example.kalkulatorkalorii.ui.bmi.BmiFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_bmi" />
 
     <fragment
-        android:id="@+id/nav_share"
+        android:id="@+id/nav_product"
         android:name="com.example.kalkulatorkalorii.ui.kcal.KcalFragment"
         android:label="@string/menu_share"
         tools:layout="@layout/fragment_kcal" />
 
     <fragment
-        android:id="@+id/nav_send"
+        android:id="@+id/nav_demand"
         android:name="com.example.kalkulatorkalorii.ui.demand.DemandFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_demand" />
