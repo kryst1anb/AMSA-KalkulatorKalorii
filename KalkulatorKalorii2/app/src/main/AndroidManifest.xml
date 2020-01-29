@@ -11,6 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name="com.example.kalkulator.ui.BMR"/>
+        <activity android:name="com.example.kalkulator.ui.BMI"/>
+        <activity android:name="com.example.kalkulator.ui.FragmentContainerSearch"/>
+        <activity android:name="com.example.kalkulator.ui.Demand"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

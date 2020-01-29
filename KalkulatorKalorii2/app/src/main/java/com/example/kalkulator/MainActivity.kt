@@ -6,9 +6,7 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.example.kalkulator.ui.BMR
-import com.example.kalkulator.ui.FragmentContainerList
-import com.example.kalkulator.ui.FragmentContainerSearch
+import com.example.kalkulator.ui.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -18,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -30,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             R.id.action_kalorie -> openFragmentContainerSearch()
             R.id.action_products -> openFragmentContainerList()
             R.id.action_bmr -> openBMR()
+            R.id.action_bmi -> openBMI()
+            R.id.action_zapotrzebowanie -> openDemand()
         }
 
         return super.onOptionsItemSelected(item)
@@ -51,6 +52,17 @@ class MainActivity : AppCompatActivity() {
     fun openBMR()
     {
         val intent = Intent(this, BMR::class.java)
+        startActivity(intent)
+    }
+
+    fun openBMI()
+    {
+        val intent = Intent(this, BMI::class.java)
+        startActivity(intent)
+    }
+
+    fun openDemand(){
+        val intent = Intent(this, Demand::class.java)
         startActivity(intent)
     }
 }

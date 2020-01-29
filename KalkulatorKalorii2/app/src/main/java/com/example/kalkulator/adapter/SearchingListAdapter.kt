@@ -25,6 +25,10 @@ class SearchingListAdapter(
         return ViewHolder(v)
     }
 
+    override fun getItemCount(): Int {
+        return if (products == null) 0 else products.size
+    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val product = products!![position]!!
         holder.item_name.text = product.item_name
@@ -36,23 +40,23 @@ class SearchingListAdapter(
         holder.buttonAddProduct.setOnClickListener {
             //add to db
             Thread {
-                val db = RecipeDatabase.getInstance(context)
+                //val db = RecipeDatabase.getInstance(context)
 
-                val insertRecipe = Product(null, product.item_name!!, product.nf_calories!!, product.nf_total_fat!!, product.nf_protein!!, product.nf_total_carbohydrate!!)
-                db.recipeDao().insert(insertRecipe)
+                //val insertRecipe = Product(null, product.item_name!!, product.nf_calories!!, product.nf_total_fat!!, product.nf_protein!!, product.nf_total_carbohydrate!!)
+                //db.recipeDao().insert(insertRecipe)
 
             }.start()
             Toast.makeText(context, "Recipe added", Toast.LENGTH_SHORT).show()
         }
 
-        holder.singleRecipe.setOnClickListener {
-            val intent = Intent(context, DisplaySearchRecipe::class.java).apply {
-                putExtra("title", product.item_name)
-                putExtra("ingredients", product.ingredients)
-                putExtra("href", product.href)
-            }
-            (context as MainActivity).startActivity(intent)
-        }
+        /* holder.singleRecipe.setOnClickListener {
+             val intent = Intent(context, DisplaySearchRecipe::class.java).apply {
+                 putExtra("title", product.item_name)
+                 putExtra("ingredients", product.ingredients)
+                 putExtra("href", product.href)
+             }
+             (context as MainActivity).startActivity(intent)
+         }*/
     }
 
     class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
@@ -63,9 +67,4 @@ class SearchingListAdapter(
         val nf_total_carbohydrate = itemView.findViewById<TextView>(R.id.item_carbo)
         val buttonAddProduct = itemView.findViewById<Button>(R.id.add_item)
     }
-
-    override fun getItemCount(): Int {
-        return if (products == null) 0 else products.size
-    }
-
 }

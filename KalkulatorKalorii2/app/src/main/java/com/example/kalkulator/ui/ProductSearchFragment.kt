@@ -15,7 +15,6 @@ import com.example.kalkulator.api.apiConnect
 import kotlinx.android.synthetic.main.fragment_kcal.*
 
 class ProductSearchFragment : Fragment() {
-
     private  lateinit var adapter : SearchingListAdapter
 
     override fun onCreateView(

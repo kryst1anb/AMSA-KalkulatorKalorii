@@ -9,12 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.kalkulator.R
 
 class FragmentContainerSearch : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
-        setContentView(R.layout.fragment_container_search)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.fragment_kcal)
 
-        val fragmentMainList = ProductSearchFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerSearch,fragmentMainList).commit()
+//        val fragmentMainList = ProductSearchFragment()
+//        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerSearch,fragmentMainList).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
