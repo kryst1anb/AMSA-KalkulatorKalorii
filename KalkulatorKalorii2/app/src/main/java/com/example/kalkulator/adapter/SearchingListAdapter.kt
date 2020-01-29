@@ -49,14 +49,14 @@ class SearchingListAdapter(
             Toast.makeText(context, "Recipe added", Toast.LENGTH_SHORT).show()
         }
 
-        /* holder.singleRecipe.setOnClickListener {
-             val intent = Intent(context, DisplaySearchRecipe::class.java).apply {
-                 putExtra("title", product.item_name)
-                 putExtra("ingredients", product.ingredients)
-                 putExtra("href", product.href)
-             }
-             (context as MainActivity).startActivity(intent)
-         }*/
+       /* holder.singleRecipe.setOnClickListener {
+            val intent = Intent(context, DisplaySearchRecipe::class.java).apply {
+                putExtra("title", product.item_name)
+                putExtra("ingredients", product.ingredients)
+                putExtra("href", product.href)
+            }
+            (context as MainActivity).startActivity(intent)
+        }*/
     }
 
     class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){

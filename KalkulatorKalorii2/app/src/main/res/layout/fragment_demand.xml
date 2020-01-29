@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -21,7 +20,6 @@
             android:id="@+id/radio_man_demand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="Man" />
 
         <RadioButton
@@ -60,8 +58,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:textAlignment="center"
-        tools:text="Height" />
+        android:text="Height"
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/text_age_demand"
@@ -91,17 +89,10 @@
         android:layout_height="wrap_content">
 
         <RadioButton
-            android:id="@+id/radio_satus_zero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="Lack of physical activity" />
-
-        <RadioButton
             android:id="@+id/radio_satus_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Low physical activity" />
+            android:text="Lack of physical activity" />
 
         <RadioButton
             android:id="@+id/radio_status_two"
@@ -127,46 +118,11 @@
             android:layout_height="wrap_content"
             android:text="Very high physical activity" />
 
-
-    </RadioGroup>
-    <Button
-        android:id="@+id/button_calc_demand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Calculate demand" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/text_zapotrzebowanie"
+        <Button
+            android:id="@+id/button_calc_demand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Twoje zapotrzebowanie kaloryczne: "
-            android:textAlignment="center"
-            android:textColor="@android:color/background_dark"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/demand_result"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:textColor="@android:color/background_dark"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_zapotrzebowanie"
-            app:layout_constraintVertical_bias="0.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:text="Calculate demand" />
+    </RadioGroup>
 
 </LinearLayout>

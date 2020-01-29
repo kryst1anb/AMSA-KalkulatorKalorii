@@ -15,6 +15,7 @@ import com.example.kalkulator.api.apiConnect
 import kotlinx.android.synthetic.main.fragment_kcal.*
 
 class ProductSearchFragment : Fragment() {
+
     private  lateinit var adapter : SearchingListAdapter
 
     override fun onCreateView(
@@ -54,7 +55,6 @@ class ProductSearchFragment : Fragment() {
 
         button_search_item.setOnClickListener {
             val response = apiConnect().apiConnection((name_product_search?.text.toString()))
-
             adapter = SearchingListAdapter(response.listItems,requireContext(),this)
             search_list.adapter = adapter
             search_list.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)

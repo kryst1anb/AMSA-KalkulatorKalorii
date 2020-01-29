@@ -13,8 +13,8 @@ class FragmentContainerSearch : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_kcal)
 
-//        val fragmentMainList = ProductSearchFragment()
-//        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerSearch,fragmentMainList).commit()
+        val fragmentMainList = ProductSearchFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerSearch,fragmentMainList).commit()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -34,8 +34,7 @@ class FragmentContainerSearch : AppCompatActivity() {
 
     fun openFragmentContainerSearch()
     {
-        val intent = Intent(this,
-            FragmentContainerSearch::class.java)
+        val intent = Intent(this, FragmentContainerSearch::class.java)
         startActivity(intent)
     }
 
