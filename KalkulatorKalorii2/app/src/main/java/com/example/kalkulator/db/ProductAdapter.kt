@@ -10,8 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.kalkulator.R
 
 class ProductAdapter(private val recyclerView: RecyclerView, context: Context, val yp:Boolean) : RecyclerView.Adapter<ProductAdapter.ProductListViewHolder>() {
+
     val products = mutableListOf<Product>()
+
     var con: Context = context
+
     fun getContext(): Context
     {
         return con

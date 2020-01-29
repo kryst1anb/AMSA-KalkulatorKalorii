@@ -8,10 +8,10 @@ import com.google.gson.Gson
 import okhttp3.*
 import java.io.IOException
 
-class apiConnect : ViewModel() {
+class apiConnect {
 
     companion object {
-        private var searchedProductsList = ResultProductList()
+        private var productsList = ResultProductList()
     }
 
     fun apiConnection(typedSearch: String): ResultProductList {
@@ -37,12 +37,12 @@ class apiConnect : ViewModel() {
                     var gson = Gson()
                     val data = gson.fromJson(myResponse, Result::class.java)
 
-                    searchedProductsList.listItems = data.results
+                    productsList.listItems = data.results
                 }
             })
         } catch (e: IOException) {
             e.printStackTrace()
         }
-        return searchedProductsList
+        return productsList
     }
 }
