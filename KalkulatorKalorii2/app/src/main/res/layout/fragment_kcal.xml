@@ -13,7 +13,7 @@
         android:textAlignment="center" />
 
     <EditText
-        android:id="@+id/name_kcal"
+        android:id="@+id/name_product_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -25,12 +25,11 @@
         android:id="@+id/button_search_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="show Product" />
+        android:text="Search product" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_search_list"
+        android:id="@+id/search_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
 </LinearLayout>
