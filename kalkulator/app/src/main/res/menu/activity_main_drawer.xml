@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_BMI"
+            android:title="Oblicz BMI" />
+        <item
+            android:id="@+id/nav_BMR"
+            android:title="Oblicz BMR" />
+        <item
+            android:id="@+id/nav_demand"
+            android:title="Oblicz Zapotrzebowanie" />
+        <item
+            android:id="@+id/nav_product"
+            android:title="Wyszukaj Produktu" />
+    </group>
+
+</menu>
